@@ -6,17 +6,9 @@ const map = new mapboxgl.Map({
   zoom: 12, // starting zoom
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
-// const { activityMarker, hotelMarker, restaurantMarker, poopMarker }  = require('./marker.js')
+
 const buildMarker  = require('./marker.js') //takes type, longitude, latitude
 
 buildMarker('activity', -74.009, 40.705).addTo(map)
 buildMarker('hotel', -74.005365, 40.72547).addTo(map)
 //have to addTo(map) in THIS FILE because that's where map is defined!!!!
-
-// new mapboxgl.Marker(activityMarker()).setLngLat([-74.009, 40.705]).addTo(map);//FSA
-
-// new mapboxgl.Marker(hotelMarker()).setLngLat([-74.005365, 40.72547]).addTo(map);
-
-// new mapboxgl.Marker(restaurantMarker()).setLngLat([-73.983865, 40.721274]).addTo(map);
-
-// new mapboxgl.Marker(poopMarker()).setLngLat([-74.011266, 40.70688]).addTo(map);
