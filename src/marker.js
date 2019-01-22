@@ -8,8 +8,8 @@ const images = {
 };
 
 function buildMarker(type, longitude, latitude){
-  console.log(marker(type))
-  new mapboxgl.Marker(marker(type)).setLngLat([-74.009, 40.705]).addTo(map)//`${longitude}, ${latitude}`]).addTo(map)
+  //console.log(marker(type))
+  return new mapboxgl.Marker(marker(type)).setLngLat([longitude, latitude])
 }
 
 function marker(type){
